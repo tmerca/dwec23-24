@@ -89,3 +89,108 @@ if(!indefinida){
 // %= modula y asigna a%=b -> a = a % b;
 
 // - cambio de signo // a = 5, b = -a, b = -5;
+
+
+
+// Conversión de tipos 
+let a = "5";
+let b = "6";
+
+console.log(typeof a, typeof b);
+
+// let A = +a;
+// let B = +b;
+
+let c = "4.52";
+let C = +c;
+
+console.log(+a + +b);
+console.log(typeof a, typeof b);
+
+
+// Operadores de comparación 
+// -> Comparar dos valores y devolver un resultado booleano
+
+// > mayor que
+//console.log(5 > 4);
+
+// < menor que
+//console.log(5 < 4);
+
+// >= mayor o igual que
+//console.log(5 >= 4);
+
+// <= menor o igual que
+//console.log(5 <= 4);
+
+// == igual que (comparación a valor)
+//let d = 5;
+//let e = 6;
+//console.log(4 == 4);
+
+// != distinto que 
+// === igual en valor y tipo que
+// !== distinto en valor o tipo que
+// console.log(d !== e);
+
+
+// Operadores booleanos 
+// -> Permiten comparar expresiones booleanas con las que se construyen condiciones
+// que se pueden aplicar en funciones, bucles, etc.
+
+// && AND solo devuelve true cuando ambos operadores lo son
+/*
+    true && true -> true
+    true && false -> false
+    false && true -> false
+    false &&  false -> false
+*/
+
+
+// || OR Devuelve true si cualquiera de ambos operadores lo es
+
+/*
+    true || true -> true
+    true || false -> true 
+    false || true ->  true
+    false || false -> false
+
+*/ 
+
+// let f = true;
+// let h = true;
+// console.log(f && h);
+
+// let cadena;
+// if(cadena){
+//     console.log(cadena.length);
+// }else {
+//     console.log("la cadena está vacía");
+// }
+
+// ! NOT Devuelve lo contrario al operando
+// let g = true;
+// console.log(!g);
+
+
+// EJERCICIO 
+/*
+
+    Se nos facilitan tres variables que contienen información sobre una ciudad.
+
+    let esCapital; booleana
+    let numeroCiudadanos; number
+    let impuestoPorCiudadano; float
+
+    - esCapital: será true si y solo si la ciudad es capital
+    - numeroCiudadanos: es el número de ciudadanosde esta ciudad
+    - impuestoPorCiudadano: es el impuesto medio mensual que paga un ciudadano 
+    de esa ciudad
+
+    Para nosotros,
+    una metrópolis será una ciudad si bien es una capital con más de 100000 ciudadanos
+    o bien es una ciudad con más de 200000 ciudadanos y una renta media de 720000000 al año
+
+    Dad una expresión booleana con las tres variables de tal manera que sea cierta si
+    y solo si si la ciudad es una Metrópolis
+*/ 
