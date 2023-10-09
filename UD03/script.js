@@ -20,7 +20,7 @@
 // let a = 10;
 // let b = 20;
 
-// //OPERADOR TERNARIO
+// OPERADOR TERNARIO
 // let resultado = (a > b) ? (a - b) : (b - a);
 
 // console.log(resultado);
@@ -106,3 +106,30 @@
 //     }
 //     console.log(i);
 // }
+
+
+// FECHAS
+
+// let parrafo = document.getElementById("fecha");
+
+// parrafo.innerHTML = "Hola cara de bola";
+
+let parrafo = document.getElementById("fecha");
+
+// new Date();
+// new Date(milisegundos);
+// new Date(fechaString);
+// new Date(año, mes, dia, horas, minutos, segundos, milisegundos)
+
+// let fecha = new Date("2003/11/14");
+///let fecha = new Date("Jan 16 2000");
+let fecha = new Date(71,11,29,15,16,34,10);
+//parrafo.innerHTML = fecha.getDate();
+//parrafo.innerHTML = fecha.getDay();
+//parrafo.innerHTML = fecha.getFullYear();
+//parrafo.innerHTML = fecha.getHours();
+//parrafo.innerHTML = fecha.getMilliseconds();
+//parrafo.innerHTML = fecha.getMinutes();
+//parrafo.innerHTML = fecha.getSeconds();
+//parrafo.innerHTML = fecha.getMonth();
+parrafo.innerHTML = fecha.getTime();
