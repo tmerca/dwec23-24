@@ -43,3 +43,79 @@
 // METODO PUSH (añade el valor al final del array)
 //a.push(5);
 //console.log(a[a.length-1]);
+
+
+// let a = [1, 2, 3];
+// console.log(a);
+// delete a[2];
+// console.log(a);
+// let i = 2;
+// if(a[i]){
+//     console.log(a[i]);
+// } else {
+//     console.log("Slot vacio");
+// }
+
+// Iterando Arrays
+
+let letras = [..."Hola amiguitos"];
+let aux = "";
+for(let letra of letras){
+    aux += letra;
+ }
+
+// // console.log(aux);
+
+// aux = "";
+// let suma = 0;
+// for(let [index,letra] of letras.entries()){
+//     // suma+= index;
+//     // aux = letra;
+//     if(index % 2 === 0) aux += letra;
+// }
+
+// console.log(aux);
+// console.log(suma);
+
+// let index = 0;
+// let mayusculas = "";
+// console.log(letras);
+// letras.forEach(letra => {
+//     if(index % 2 === 0){
+//         mayusculas = letra.toUpperCase();
+//     } else{
+//         mayusculas +=letra;
+//     }
+//     index++;
+    
+// });
+
+// console.log(mayusculas);
+
+// let letra = "";
+// let vocales = "";
+// for(let i = 0; i < letras.length ; i++){
+//     letra = letras[i];
+//     if(/[aeiou]/.test(letra)){
+        
+//         vocales += letra;
+//     }
+// } 
+
+// ARRAYS MULTIDIMENSIONALES
+// let tabla = new Array(10);
+
+// for(let i = 0; i < tabla.length; i++){
+//     tabla[i] = new Array(5); // Cada fila va a tener 5 columnas
+// }
+
+// for(let fila = 0; fila < tabla.length; fila++){
+//     let arrayInterior = tabla[fila];
+//     for(let col = 0; col < arrayInterior.length; col++){
+//         arrayInterior[col] = fila*col;
+//     }
+// }
+
+// console.log(tabla);
+
+
