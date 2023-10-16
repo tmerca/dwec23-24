@@ -11,6 +11,6 @@ for(let fila = 0; fila < tabla1.length; fila++){
         arrayInterior[col] = fila * col;
         if(arrayInterior[col] % 2 != 0){
             console.log(arrayInterior[col]);
-        }        
+        }
     }
 }
