@@ -175,7 +175,6 @@
 // METODO SORT
 // ordena los elementos de un array alfabeticamente si son cadenas
 // numericamente si son numeros 
-let otros = [1,4,6,3,10,-10];
 // console.log(paco.sort());
 // console.log(otros.sort());
 
@@ -190,21 +189,125 @@ let otros = [1,4,6,3,10,-10];
 // SORT() en NUMEROS
 // let numeros = [10, 5, 8, 3, 1];
 // console.log(numeros.sort(function(a, b) {
-//     return a - b;
-// }));
-
-// FUNCION FLECHA
+    //     return a - b;
+    // }));
+    
+    // FUNCION FLECHA
 // console.log(numeros.sort((a, b) => {
-//   return a - b;
-// }));
+    //   return a - b;
+    // }));
+    
+    // SORT() en CADENAS
+    // let paco = ['joan', 'amparo', 'esther', 'amparo', 'Zoraida', 'Barbara', 'Ángel'];
+    // console.log(paco.sort((a, b) => {
+        //     return (a.toLowerCase() > b.toLowerCase()) ? 1 : 
+        //     (a.toLowerCase() < b.toLowerCase()) ? -1 : 0;
+        // }));
+        
+    //     console.log(paco.sort((a, b) => {
+    //         return a.localeCompare(b);
+    //     }));
+    // let otros = [1,4,6,3,10,-10];
 
-// SORT() en CADENAS
-let paco = ['joan', 'amparo', 'esther', 'amparo', 'Zoraida', 'Barbara', 'Ángel'];
-// console.log(paco.sort((a, b) => {
-//     return (a.toLowerCase() > b.toLowerCase()) ? 1 : 
-//     (a.toLowerCase() < b.toLowerCase()) ? -1 : 0;
-// }));
 
-console.log(paco.sort((a, b) => {
-    return a.localeCompare(b);
-}));
+
+    // FUNCIONES
+
+    // function diHola(){
+    //     console.log("Hola");
+    // }
+    // diHola();
+
+    // let resultado = multiplica(3,10);
+    // console.log(resultado);
+    // function multiplica(c, d){
+    //     let a = 10;
+    //     let b = 20;
+        
+    //     return (a * b * c * d);
+    // }
+
+
+
+
+    // OBJETOS
+
+    // let unCliente = {
+    //     //clave   //valor
+    //     nombre : "Peter",
+    //     apellido : "Jackson",
+    //     "dirección fiscal" : "C/ Desconocida", 
+    //     '-+-+-+' : "boquepasa",
+    //     pago : {
+    //         tipo: "Visa",
+    //         tarjeta: "123456789",
+    //         "fecha de caducidad" : "nunca"
+    //     },
+    //     vencimiento : 30
+    // }
+    // unCliente["vencimiento"] = 60;
+    
+    // unCliente.apellido = "Garcia";
+    // console.log(unCliente.apellido);
+    // console.log(unCliente);
+
+
+    // METODOS COMO ELEMENTOS
+    // let estudiante = {
+    //     id: 2,
+    //     nombre: "Joan",
+    //     notas: [10,0,5],
+    //     muestraMedia: function(){
+    //         let notaMedia = (estudiante.notas[0] + estudiante.notas[1] + estudiante.notas[2]) / 3;
+    //         return "La nota media de " + estudiante.nombre + " es de " + notaMedia
+    //     }
+    // }
+    // estudiante.apellido = "Melsión";
+
+    // estudiante.diAdios = function(){
+    //     return "Adios";
+    // }
+
+    // console.log(estudiante.diAdios());
+
+
+
+    // PALABRA RESERVADA THIS
+    // let factura = {
+    //     descripcion : "Factura de prueba",
+    //     precio : 100.0,
+    //     iva : 21.0,
+    //     subtotal : function(){
+    //         return this.precio;
+    //     },
+    //     total: function() {
+    //         return this.precio + (this.precio * this.iva)/100;
+    //     }
+    // }
+
+    // console.log(factura);
+    // console.log(factura.total());
+
+
+
+    //CONSTRUCTORES
+
+    function Web(){
+        this.url = "http://localhost";
+        this.nombre = "Localhost";
+        this.muestraInformacion = function(){
+            return "Url: " + this.url + "\n" + "Web: " + this.nombre;
+        }
+    }
+    
+    Web.prototype.visitas = 2;
+    Web.prototype.miFuncion = function(){
+        return "Hola";
+    }
+
+    let otraInstancia = new Web();
+    otraInstancia.url = "http://tracker.gg";
+    otraInstancia.nombre = "Ver estadísticas"
+
+    console.log(otraInstancia.visitas);
+    console.log(otraInstancia.miFuncion());
