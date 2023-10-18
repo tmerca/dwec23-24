@@ -292,22 +292,237 @@
 
     //CONSTRUCTORES
 
-    function Web(){
-        this.url = "http://localhost";
-        this.nombre = "Localhost";
-        this.muestraInformacion = function(){
-            return "Url: " + this.url + "\n" + "Web: " + this.nombre;
-        }
-    }
+    // function Web(){
+    //     this.url = "http://localhost";
+    //     this.nombre = "Localhost";
+    //     this.muestraInformacion = function(){
+    //         return "Url: " + this.url + "\n" + "Web: " + this.nombre;
+    //     }
+    // }
     
-    Web.prototype.visitas = 2;
-    Web.prototype.miFuncion = function(){
-        return "Hola";
-    }
+    // Web.prototype.visitas = 2;
+    // Web.prototype.miFuncion = function(){
+    //     return "Hola";
+    // }
 
-    let otraInstancia = new Web();
-    otraInstancia.url = "http://tracker.gg";
-    otraInstancia.nombre = "Ver estadísticas"
+    // let otraInstancia = new Web();
+    // otraInstancia.url = "http://tracker.gg";
+    // otraInstancia.nombre = "Ver estadísticas"
 
-    console.log(otraInstancia.visitas);
-    console.log(otraInstancia.miFuncion());
+    // console.log(otraInstancia.visitas);
+    // console.log(otraInstancia.miFuncion());
+
+// const ciudades = [
+//     {
+//         municipio: "Zaragoza",
+//         provincia: "Zaragoza"
+//     },
+//     {
+//         municipio: "Ávila",
+//         provincia: "Ávila" 
+//     },
+//     {
+//         municipio: "Madrid",
+//         provincia: "Madrid" 
+//     },
+//     {
+//         municipio: "Barcelona",
+//         provincia: "Barcelona" 
+//     }
+// ];
+
+// console.log(ciudades);
+
+// ciudades.sort((a, b) => {
+//     return a.provincia.localeCompare(b.provincia);
+// });
+
+// console.log(ciudades);
+
+
+
+//  ES6
+
+// const miArray = ["A", "b", "C"];
+// miArray.push("D");
+// console.log(miArray);
+// miArray[1] = "B";
+// console.log(miArray);
+
+// DESESTRUCTURACIÓN
+
+// const numeros = [1, 2, 3, 4];
+// const [a, b, c] = numeros;
+// console.log(a, b, c);
+
+// const persona = {
+//     nombre : "Andreu",
+//     edad : 33
+// };
+
+// const {nombre, edad} = persona;
+
+// console.log(nombre);
+
+// const nombre = "Josep";
+// const edad = 33;
+
+// const persona = {
+//     nombre,
+//     edad
+// }
+
+// console.log(persona);
+
+// TEMPLATE STRINGS - PLANTILLAS DE CADENAS
+// Operador de interpolación ${}
+
+// const nombre = "Bob";
+// const edad = 32;
+
+// const mensaje = `Hola, mi nombre es ${nombre} y mi edad es ${edad}`;
+// console.log(mensaje);
+
+
+// OPERADOR SPREAD
+// const numeros = [1, 2, 3];
+// const nuevosNumeros = [...numeros, 4, 5];
+
+// console.log(nuevosNumeros);
+
+
+// PARAMETROS POR DEFECTO
+// function saludar(nombre = "Invitado") {
+//     console.log(`Hola, ${nombre}`);
+// }
+
+// saludar();
+
+
+// PARAMETROS REST (REST PARAMETER)
+// function sumar(...numeros){
+//     let resultado = 0;
+
+//     for(let numero of numeros){
+//         resultado += numero;
+//     }
+
+//     return resultado;
+// }
+
+// console.log(sumar(5, 4, -1, 6, 3, 65, 1001, -666));
+
+
+
+// FUNCIONES FLECHA () => {}
+
+// function sumar(a,b){
+//     return a + b; 
+// }
+
+// const sumar = (...numeros) => {
+    
+//     let resultado = 0;
+
+//     for(let numero of numeros){
+//         resultado += numero;
+//     }
+
+//     return resultado;
+// };
+
+// console.log(sumar(3, 5, 9 ,10));
+
+
+// MÉTODOS DE ARRAYS
+// FOR EACH -> Ejecuta una función (nuestra) una vez por cada elemento del array
+
+// const multiplica = (n) => {
+//     return n * 2;
+// };
+
+// numeros.forEach((numero) => {
+    //     console.log(multiplica(numero));
+// });
+
+// console.log(numeros);
+
+
+// METODO MAP()
+// Crea un nuevo array con los resultados de aplicar una funcion a cada elemento del array
+// const dobleNumero = numeros.map((numero) => {
+    //     return numero * 2;
+    // });
+    
+    // const dobleNumero = numeros.map((numero) => {
+        //     return multiplica(numero);
+        // });
+        
+        // console.log(dobleNumero);
+        
+        
+        // FILTER()
+        // crea un nuevo array con todos los elementos que cumplan una condicion determinada
+        
+        // const numerosPares = numeros.filter((numero) => {
+            //     return numero % 2 === 0;
+            // });
+            
+            
+            // REDUCE()
+            // Aplica una funcion a un acumulador y a cada
+            // elemento del array (de izquierda a derecha) para
+            // a un ÚNICO valor
+            
+            // const suma = numeros.reduce((acumulador, numero) => {
+//     return acumulador + numero;
+// }, 0);
+
+// console.log(suma);
+
+
+// FIND()
+// Devuelve el primer elemento del array que cumpla una determinada condicion
+// const numeroEncontrado = numeros.find((numero) => {
+//     return numero < 3;
+// });
+    
+// console.log(numeroEncontrado);
+
+const numeros = [1, 2, 3, 4, 5];
+
+// FINDINDEX()
+// Devuelve el primer elemento del array que cumple con una función de prueba o
+// retornará -1 si no encuentra nada
+
+// const indiceEncontrado = numeros.findIndex((numero) => {
+//     return numero < 3;
+// });
+
+// console.log(indiceEncontrado);
+
+
+
+// SOME()
+// Comprueba si almenos un elemento del array cumple una condicion determinada
+
+const tieneNumeroPar = numeros.some((numero) => {
+    return numero % 2 === 0;
+});
+
+//console.log(tieneNumeroPar);
+
+// if(numeros.some((numero) => {
+//     return numero % 2 === 0;
+// })) {
+//     console.log("Funciona");
+// }
+
+// EVERY()
+// Comprueba si TODOS los elementos del array cumplen una condición
+
+const todosNumerosPares = numeros.every((numero) => {
+    return numero % 2 === 0;
+});
+
+console.log(todosNumerosPares);
