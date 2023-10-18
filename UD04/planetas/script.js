@@ -3,13 +3,14 @@ let nombrePlaneta= ["Mercurio", "Venus", "Marte", "Jupiter", "Urano"];
 // El array distanciaAlSol está en Km
 let distanciaAlSol = [58000000, 108000000, 228000000, 750000000, 3000000000];
 // Número de planeta Tierra que se necesitan para igualar el diámetro
-let tamañoRelativo = [0.38, 0.86, 2, 11, 63];
+let tamañoRelativo = [0.38, 0.86, 2, 1321, 63];
 
 let fecha = new Date();
 let fechaDescubrimiento = [fecha.getDate(), fecha.getTime(), fecha.getTime(), fecha.getTime(), fecha.getTime()];
 
 //CONSTRUCTOR DE PLANETAS
-
+// ponemos las propiedades necesarias para luego coger los datos del array y tambien
+// una funcion para retornar toda la información del Objeto
 function Planeta(){
     this.nombrePlaneta;
     this.distanciaAlSol;
@@ -25,6 +26,8 @@ function Planeta(){
 
 let planetas = [];
 
+// Bucle For para poder rellenar el array vacío llamado planetas y
+// y que muestre por pantalla la informacion de cada objeto
 for(i = 0; i < distanciaAlSol.length; i++){
     planetas[i] = new Planeta();
     planetas[i].nombrePlaneta = nombrePlaneta[i];
