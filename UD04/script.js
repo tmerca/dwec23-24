@@ -193,8 +193,8 @@
     // }));
     
     // FUNCION FLECHA
-// console.log(numeros.sort((a, b) => {
-    //   return a - b;
+    // console.log(numeros.sort((a, b) => {
+    //     return a - b;
     // }));
     
     // SORT() en CADENAS
@@ -489,27 +489,27 @@
     
 // console.log(numeroEncontrado);
 
-const numeros = [1, 2, 3, 4, 5];
 
 // FINDINDEX()
 // Devuelve el primer elemento del array que cumple con una función de prueba o
 // retornará -1 si no encuentra nada
 
 // const indiceEncontrado = numeros.findIndex((numero) => {
-//     return numero < 3;
-// });
+    //     return numero < 3;
+    // });
+    
+    // console.log(indiceEncontrado);
+    
+    
+    
+    // SOME()
+    // Comprueba si almenos un elemento del array cumple una condicion determinada
 
-// console.log(indiceEncontrado);
-
-
-
-// SOME()
-// Comprueba si almenos un elemento del array cumple una condicion determinada
-
-const tieneNumeroPar = numeros.some((numero) => {
-    return numero % 2 === 0;
-});
-
+    // const tieneNumeroPar = numeros.some((numero) => {
+        //     return numero % 2 === 0;
+        // });
+        
+        
 //console.log(tieneNumeroPar);
 
 // if(numeros.some((numero) => {
@@ -521,8 +521,120 @@ const tieneNumeroPar = numeros.some((numero) => {
 // EVERY()
 // Comprueba si TODOS los elementos del array cumplen una condición
 
-const todosNumerosPares = numeros.every((numero) => {
-    return numero % 2 === 0;
-});
+// const todosNumerosPares = numeros.every((numero) => {
+//     if(numero > 3){
+//         return numero % 2 === 0;
+//     } else{
+//         return numero % 6 === 0;
+//     }
+// });
 
-console.log(todosNumerosPares);
+// console.log(todosNumerosPares);
+
+// const numeros = [1, 2, 3, 4, 5];
+
+
+
+
+
+// CLASES - class
+
+class Persona {
+    constructor(nombre){
+        this.nombre = nombre;
+    }
+
+    saludar(){
+        console.log(`Hola, soy ${this.nombre}.`);
+    }
+}
+
+const Andreu = new Persona("Andreu");
+
+//Andreu.saludar();
+
+
+// HERENCIA
+class Empleado extends Persona {
+    constructor(nombre, salario){
+        super(nombre);
+        this.salario = salario;
+    }
+
+    trabajar(){
+        console.log(`${this.nombre} trabaja por ${this.salario} euros al mes`);
+    }
+
+}
+
+const Maria = new Empleado("Maria", 300000);
+
+// Maria.saludar();
+// Maria.trabajar();
+
+
+// SIMBOLOS
+
+/* 
+   Son una nueva clase de datos introducida por ES6 
+   Son valores unicos e inmutables.
+   Se pueden utilizar como identificadores de propiedades de objetos
+*/
+
+// const id = Symbol("id");
+// const persona = {
+//     nombre : "Andreu",
+//     [id] : 1
+// };
+
+// console.log(persona[id]);
+
+
+// ITERADORES 
+// Son objetos que implementan el protocolo de iteración en JavaScript 
+// permiten recorrer y acceder a los elementos de una colección uno a uno
+
+// const numeros = [1, 2, 3];
+// const iterador = numeros[Symbol.iterator]();
+
+// console.log(iterador.next());
+// console.log(iterador.next());
+// console.log(iterador.next());
+// console.log(iterador.next());
+
+
+// SET
+// Permite almacenar valores ÚNICOS de cualquier tipo
+// No permite duplicados y ofrece metodos
+// Ofrece metodos para agregar, eliminar y verificar la existencia de elementos
+
+// const setNumeros = new Set();
+// setNumeros.add(1);
+// setNumeros.add(2);
+// setNumeros.add(3);
+
+// console.log(setNumeros.has(2));
+// setNumeros.delete(2);
+// console.log(setNumeros.has(2));
+
+// const iterador = setNumeros[Symbol.iterator]();
+// console.log(iterador.next());
+// console.log(iterador.next());
+// console.log(iterador.next());
+
+
+// MAP
+// Permite almacenar PARES clave-valor, donde cada clave es ÚNICA 
+// Permite operaciones de busqueda, insercion y eliminacion de elementos
+
+// const mapaNombres = new Map();
+// mapaNombres.set("nombre", "Andreu");
+// mapaNombres.set("edad", 33);
+// mapaNombres.set("profesion", "Desarrollador");
+
+// console.log(mapaNombres.get("nombre"));
+// console.log(mapaNombres.has("edad"));
+// mapaNombres.delete("edad");
+// console.log(mapaNombres.has("edad"));
+// console.log(mapaNombres.size);
+// console.log(mapaNombres);
