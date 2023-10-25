@@ -171,26 +171,3 @@ console.log(typeof a, typeof b);
 // ! NOT Devuelve lo contrario al operando
 // let g = true;
 // console.log(!g);
-
-
-// EJERCICIO 
-/*
-
-    Se nos facilitan tres variables que contienen información sobre una ciudad.
-
-    let esCapital; booleana
-    let numeroCiudadanos; number
-    let impuestoPorCiudadano; float
-
-    - esCapital: será true si y solo si la ciudad es capital
-    - numeroCiudadanos: es el número de ciudadanosde esta ciudad
-    - impuestoPorCiudadano: es el impuesto medio mensual que paga un ciudadano 
-    de esa ciudad
-
-    Para nosotros,
-    una metrópolis será una ciudad si bien es una capital con más de 100000 ciudadanos
-    o bien es una ciudad con más de 200000 ciudadanos y una renta media de 720000000 al año
-
-    Dad una expresión booleana con las tres variables de tal manera que sea cierta si
-    y solo si si la ciudad es una Metrópolis
-*/ 

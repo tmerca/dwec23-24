@@ -3,17 +3,22 @@ let miFecha = new Date();
 let laHora = document.getElementById("lahora");
 
 // Inicializo el tiempo para el cronometro
-miFecha.setHours(0,0,0,0);
+miFecha.setHours(0,0,10,0);
 
 // Inicializo el texto de "lahora"
-laHora.innerHTML = "00:00:00";
+laHora.innerHTML = "00:00:10";
 
 function crono(){
     let horas = miFecha.getHours();
     let minutos = miFecha.getMinutes();
     let segundos = miFecha.getSeconds();
 
-    segundos += 1;
+    segundos -= 1;
+
+    // Funcion para que cuando llegue a 00:00:00 no resetee el temporizador 
+    if(segundos == 0 && minutos == 0 && horas == 0){
+        clearInterval(elCrono);
+    }
 
     if(segundos == 60){
         segundos = 0;
@@ -33,10 +38,10 @@ function crono(){
 
 function reiniciarCrono(){
    // Inicializo el tiempo para el cronometro
-   miFecha.setHours(0,0,0,0);
+   miFecha.setHours(0,0,10,0);
 
    // Inicializo el texto de "lahora"
-   laHora.innerHTML = "00:00:00";
+   laHora.innerHTML = "00:00:10";
 }
 
 function start(){
@@ -48,5 +53,5 @@ function stop(){
 }
 
 function reset(){
-    setTimeout(reiniciarCrono,1000);
+    setTimeout(reiniciarCrono,5000);
 }

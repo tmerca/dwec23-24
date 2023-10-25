@@ -8,9 +8,15 @@
 <body>
    <div id="lahora"></div>
    <div>
-    <button onclick="start();">Start</button>
-    <button onclick="stop();">Stop</button>
-    <button onclick="reset();">Reset</button>
+    <button onclick="start();
+                    this.disabled = true;
+                    ">Start</button>
+    <button onclick="stop();
+                    this.disabled = true;    
+                    ">Stop</button>
+    <button onclick="reset();
+                    this.disabled = true;
+                    ">Reset</button>
    </div>
    <script src="script.js"></script>
 </body>
