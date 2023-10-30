@@ -1,6 +1,6 @@
-let numero = prompt("Escibre un número de 4 cifras con dos diferentes como mínimo");
+let numeros = prompt("Escibre un número de 4 cifras con dos diferentes como mínimo");
 
-comprobarNumero(numero);
+comprobarNumero(numeros);
 
 function comprobarNumero(numero){
     
@@ -15,45 +15,68 @@ function comprobarNumero(numero){
             return a - b;
         });
 
-        //COMPROBAMOS QUE NO SE REPITA MAS DE DOS VECES LA MISMA CIFRA
+        //COMPROBACIÓN + MENSAJE
         for(i = 0; i < aux.length; i++){
             if(aux[i] == aux[i + 1]){
                 contador += 1;
             }
         }
 
-        // MENSAJE POR SI EL CONDICIONAL SE CUMPLE
         if(contador >= 2){
             alert('El numero contiene 3 cifras o mas iguales');
         }
 
-        let intentos = 0;
-        let kaprekar = 6174;
-        let resultadoResta;
+        let intentos = 1;
+        const kaprekar = 6174;
+        let resultadoResta = [];
+        let arrayNumero = [...numero];
+        
 
-        while(intentos < 7 || resultadoResta != kaprekar){
-            /*
-                Pongo la variable numero en un array y lo ordeno de menor a mayor
-            */
-            let menorAMayor = [...numero];
-            menorAMayor.sort((a, b) =>{
-                return a - b;
-            });
-    
-    
-            /*
-                Pongo la variable numero en un array y lo ordeno de mayor a menor
-            */
-            let mayorAMenor = [...numero];
-            mayorAMenor.sort((a, b) =>{
+        do{
+            
+            let arrayMayorAMenor = [...arrayNumero];
+            arrayMayorAMenor.sort((a, b) =>{
                 return b - a;
             });
+            
+            console.log(arrayMayorAMenor);
 
-            resultadoResta = parseInt(mayorAMenor) - parseInt(menorAMayor);
+            let mayorAMenor = "";
+            
+            for(i = 0; i < arrayMayorAMenor.length; i++){
+                mayorAMenor = mayorAMenor.concat(arrayMayorAMenor[i]);
+            }
 
+            let arrayMenorAMayor = [...arrayNumero];
+            arrayMenorAMayor.sort((a, b) =>{
+                return a - b;
+            });
+
+            console.log(arrayMenorAMayor);
+
+            let menorAMayor = "";
+
+            for(i = 0; i < arrayMenorAMayor.length; i++){
+                menorAMayor = menorAMayor.concat(arrayMenorAMayor[i]);
+            }
+
+            // console.log("Vuelta número " + intentos + ": Ordenado de menor a mayor: " + menorAMayor);
+            // console.log("Vuelta número " + intentos + ": Ordenado de mayor a menor: " + mayorAMenor);
+            
+            resultadoResta = mayorAMenor - menorAMayor;
+
+            console.log("Resultado de la resta: " + resultadoResta);
+
+            arrayNumero = [...resultadoResta];
+
+            if(resultadoResta == kaprekar){
+                console.log("Proceso finalizado en " + intentos + " vueltas");
+                intentos = 8;
+            }
+            
             intentos++;
-        }
 
+        }while(intentos < 8 &&  resultadoResta != kaprekar);
 
     }
     else{alert('El número introducido no es de 4 cifras');}
