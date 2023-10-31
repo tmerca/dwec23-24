@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 let numeros = prompt("Escrib    e un número de 4 cifras con dos diferentes como mínimo");
+=======
+let numeros = prompt("Escibre un número de 4 cifras con dos diferentes como mínimo");
+>>>>>>> 4254365b474556409d2116bf947691cdc218802d
 
 comprobarNumero(numeros);
 
