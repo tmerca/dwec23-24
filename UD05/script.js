@@ -88,23 +88,23 @@
 // Acciones que ocurren en la página web (clicks, mover/poner el ratón, entradas del teclado)
 
 //Referenciamos el elemento del DOM
-const par = document.querySelector('p');
+// const par = document.querySelector('p');
 //Creamos un evento para ese elemento
-par.addEventListener('click', (e) => {
-    // escribeLog();
-    console.log(e.target.innerText);
-    e.target.innerText = "Texto cambiado";
-    console.log(e.target.innerText);
-});
+// par.addEventListener('click', (e) => {
+//     // escribeLog();
+//     console.log(e.target.innerText);
+//     e.target.innerText = "Texto cambiado";
+//     console.log(e.target.innerText);
+// });
 
 // par.addEventListener('mouseover',() =>{
 //     console.log("He pasado el raton por encima");    
 // });
 
-function escribeLog(){
-    console.log('He hecho click sobre el primer parráfo');
-}
+// function escribeLog(){
+//     console.log('He hecho click sobre el primer parráfo');
+// }
 
-document.addEventListener("keydown", (e) => {
-    console.log("Tecla presionada: " + e.key);
-});
+// document.addEventListener("keydown", (e) => {
+//     console.log("Tecla presionada: " + e.key);
+// });
